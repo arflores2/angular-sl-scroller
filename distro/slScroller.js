@@ -1,5 +1,4 @@
 angular.module('sl.scroller', [])
-  
   .directive('slScroller', function() {
     return {
       restrict: 'A',
@@ -9,11 +8,15 @@ angular.module('sl.scroller', [])
       },
 
       link: function($scope, $element, $attrs) {
-        $element.on('click', function() {
+        $element.on('click', function(e) {
+
+          e.stopPropagation();
+
           var $btn = $element,
-              $location = $($btn.attr('href')),
+              ref = $btn.attr('href'),
+              $ref = $(ref),
               topOffset = $scope.slScrollerTopOffset || 0,
-              offset = $location.offset().top - topOffset;
+              offset = $ref.offset().top - topOffset;
 
           $('body').animate({scrollTop: offset}, "slow");
         });

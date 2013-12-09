@@ -1,8 +1,9 @@
 angular.module('app', ['sl.scroller'])
-
+  
   .controller('AppCtrl', function AppCtrl($scope, $sce) {
 
     $scope.app = {};
-    $scope.app.name = "Angular Carousel" 
+    $scope.app.name = "Angular Scroller" 
+    $scope.app.topOffset = 0;
 
   });
