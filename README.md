@@ -24,7 +24,7 @@ Animated Scrolling on anchor tags in AngularJS
     # in server/
     node server.js
 
-### Carousel Usage ######
+### Scroller Usage ######
   
     <a href="#home" sl-scroller></a>
 
