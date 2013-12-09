@@ -1,0 +1,15 @@
+.section {
+  width: 100%;
+  height: 500px;
+
+  border: 1px solid blue;
+}
+
+#home {
+  width: 100%;
+  height: 500px;
+
+  border: 1px solid orange;
+}
+
+
