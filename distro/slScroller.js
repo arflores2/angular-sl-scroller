@@ -19,8 +19,4 @@ angular.module('sl.scroller', [])
         });
       }
     }  
-  })
-
-  .controller('slCarouselCtrl', function($scope, $window) {
-    
   });
