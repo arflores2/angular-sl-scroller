@@ -29,12 +29,3 @@ Animated Scrolling on anchor tags in AngularJS
     <a href="#home" sl-scroller></a>
 
     <div id="home">My Home</div>
-
-### Item Model ######
-    
-    {
-      title: 'Test',
-      imgSrc: 'test.png',
-      description: 'This is a test'
-    } 
-
