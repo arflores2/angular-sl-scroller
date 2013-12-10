@@ -1,6 +1,6 @@
 angular.module('sl.scroller', [])
 
-  .directive('slScroller', function() {
+  .directive('slScroller', function($window) {
     return {
       restrict: 'A',
       replace: false,
@@ -37,12 +37,33 @@ angular.module('sl.scroller', [])
           }
         }
 
-        angular.element(window).bind('load', function() {
+        angular.element($window).bind('load', function() {
           var hash = this.location.hash;
 
           var $ref = $(hash);
           _scrollTo($ref);
         });
+
+        if('onhashchange' in $window) {
+
+          $window.onhashchange = function() {
+            var hash = this.location.hash;
+
+            var $ref = $(hash);
+            _scrollTo($ref);
+          };
+        }
+        else {
+          var storedHash = $window.location.hash;
+          $window.setInterval(function() {
+            if($window.location.hash != storedHash) {
+              storedHash = window.location.hash;
+
+              var $ref = $(hash);
+              _scrollTo($ref);  
+            }
+          }, 100);
+        }
 
         $element.on('click', function(e) {
 
