@@ -1,6 +1,8 @@
 # Angular Scroller #
  
-Animated Scrolling on anchor tags in AngularJS
+Animated Scrolling on anchor tags in AngularJS. Uses jQuery animate to scroll to the corresponding anchor tag.
+`window` load listener checks `window.location` to scroll to the correct hash. Most beneficial when working with
+fixed banner at the top of a one-page site.
 
 ### Application Stack ######
 
@@ -26,6 +28,6 @@ Animated Scrolling on anchor tags in AngularJS
 
 ### Scroller Usage ######
   
-    <a href="#home" sl-scroller></a>
+    <a href="#home" sl-scroller sl-scroller-top-offset="20" sl-scroller-top-offset-el-id="banner"></a>
 
     <div id="home">My Home</div>
