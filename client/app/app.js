@@ -4,6 +4,7 @@ angular.module('app', ['sl.scroller'])
 
     $scope.app = {};
     $scope.app.name = "Angular Scroller" 
-    $scope.app.topOffset = 0;
+    $scope.app.topOffset = 103;
+    // $scope.app.topOffsetElId = 'banner';
 
   });
